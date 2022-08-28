@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>CarMarket - Магазин новых и поддержанных автомобилей. Каталог.</title>
+
+    <div th:replace="fragments/header :: header-css"></div>
+
+</head>
+<body>
+
+<div th:replace="fragments/header :: header"></div>
+
+<div class="container">
+    <h2>На данной странице можно найти все машины</h2>
+    <br>
+    <!--  <form th:action="@{/}" th:object="${entity.Product}" th:method="post">-->
+    <!--    <div>-->
+    <!--      <label>Название:&nbsp;</label>-->
+    <!--      <input type="text" th:field="*{mark}"></input>-->
+    <!--    </div>-->
+    <!--    <div>-->
+    <!--      <button type="submit">Добавить в корзину</button>-->
+    <!--    </div>-->
+    <!--  </form>-->
+
+    <table>
+        <thead>
+        <tr>
+            <th>Марка</th>
+            <th>Модель</th>
+            <th>Поколение</th>
+            <th>Кузов</th>
+            <th>Трансмиссия</th>
+            <th>Тип двигателя</th>
+            <th>Объем двигателя</th>
+            <th>Мощность двигателя</th>
+            <th>Год выпуска</th>
+            <th>Количество владельцев</th>
+            <th>Пробег</th>
+        </tr>
+        </thead>
+        <!--    <tr th:each="product : ${entity.Product}">-->
+        <!--      <td th:text="${product}">1</td>-->
+
+        <!--    </tr>-->
+
+        </tr>
+        </tr>
+    </table>
+
+</div>
+
+<div th:replace="fragments/footer :: footer"></div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html xmlns:form="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CarMarket - Информация о машине</title>
+</head>
+<body>
+<form:form action="save" modelAttribute="product">
+
+    <form:hidden path="id"/>
+
+    Марка: <form:input path="mark"/><form:errors path="mark"/> <br>
+    Модель: <form:input path="model"/><br>
+    Поколение: <form:input path="generation"/><br>
+    Кузов: <form:input path="body"/><br>
+    Трансмиссия: <form:select path="gearbox">
+    <form:option value="MT" label = "МТ"></form:option>
+    <form:option value="AT" label = "АТ"></form:option>
+    <form:option value="Робот" label = "Робот"></form:option>
+    <form:option value="CVT" label = "Вариатор"></form:option>
+    </form:select>
+    <br>
+    Тип двигателя: <form:select path="typeEngine">
+    <form:option value="Бензин" label = "Бензин"></form:option>
+    <form:option value="Дизель" label = "Дизель"></form:option>
+    </form:select>
+    <br>
+    Объем двигателя: <form:input path="volumeEngine"/><br>
+    Мощность двигателя: <form:input path="powerEngine"/><br>
+    Год выпуска: <form:input path="since"/><br>
+    Количество владельцев: <form:input path="owners"/><br>
+    Пробег: <form:input path="mileage"/><br>
+
+    <input type="submit" value="Сохранить">
+</form:form>
+</body>
+</html>
